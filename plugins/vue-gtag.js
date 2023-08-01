@@ -1,6 +1,12 @@
-import Vue from 'vue'
-import VueGtag from 'vue-gtag'
-
-Vue.use(VueGtag, {
-  config: { id: 'G-6YD6EWNBRG' }
-})
+import VueGtag, { trackRouter } from "vue-gtag-next";
+// Vue.use(VueGtag, {
+//   config: { id: 'G-6YD6EWNBRG' }
+// })
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(VueGtag, {
+    config: {
+      id: "G-6YD6EWNBRG",
+    },
+  });
+  trackRouter(useRouter());
+});
