@@ -11,4 +11,11 @@ export default defineNuxtConfig({
     },
   },
   plugins: ["@/plugins/vue-gtag"],
+  modules: ['nuxt-gtag'],
+  gtag: {
+    id: 'G-6YD6EWNBRG',
+    config: {
+      page_title: 'My Custom Page Title'
+    }
+  }
 });
